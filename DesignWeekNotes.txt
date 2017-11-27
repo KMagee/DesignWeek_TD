@@ -1,0 +1,79 @@
+Monday
+======
+> sign in
+> responsive web design and media queries
+> adaptive (server-side) design
+> a word about sound fonts
+> the CSS box model
+> using fonts
+
+Tuesday
+=======
+> sign in
+> JavaScript versions - ES3, ES5, ES6 etc.
+> NodeJS and TypeScript: how to install NodeJs and the Node Package Manager (npm)
+- modular ECMAScript: CommonJS, WebPack, Require.js etc.
+> design furniture 'sprites' (for efficiency)
+> 'compiling' ECMAScript (also minification, obfuscation and tree-shaking)
+> server-side Angular
+> JIT and AOT
+> package.json
+> Overview of Angular 
+- decide the order of presentations
+> <audio> and <video> HTML5 tags
+
+Wednesday
+=========
+> sign in
+> design UX - perception, interaction and engagement
+> Web architecture
+> Presentation: on what hardware?
+> platform... (and build type) also 'Progressive Web apps'
+> after lunch
+  continue with the design html page
+  do a review exercise
+
+> Friday Projects
+  think about hardware... probably worth trialling 
+  9:00 start, max 20 mins inc qs
+  Friday afternoon will decide projects for following weeks
+  ... to include revision time for exam
+> targeted content
+
+Thursday
+========
+> sign in
+> arrangements for Friday presentations
+> Overview of React
+- Build-tools: Maven, Ant, Jenkins, Grunt, Gulp
+- JavaScript tokens, promises and observers
+> Other useful ECMAScript features
+> After lunch: consider hardware for your presentation
+  review exercise
+- tcp/ip, IPv4 and IPv6
+- Security, including session tokens
+- Cross-site scripting (xss) and cross-origin resource sharing (cors)
+> Content-Management Systems (CMS) and Learning Management Systems (LMS)
+
+Friday
+======
+- sign in
+- 9:00 Presentations
+
+Afternoon
+- some comments from this morning
+- Cordova/Phonegap/Ionic
+- my assets from this week
+
+Next 2 weeks
+- ISTQB on Thur, then exam
+- some exam prep
+- Karl will speak with each individually
+- Projects
+  - further work on your current project
+  - new project ideas
+  - make into an app?
+  - learn xxx and make a project
+  - IT refresh x2
+
+- end of course evaluations

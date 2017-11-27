@@ -1,0 +1,19 @@
+Design Review 3  see https://pastebin.com/cvwAUa8s
+===============  a solution: https://pastebin.com/Wjh6QR1N
+Coninue with the 'design.html' page (or get it from https://pastebin.com/Grz8icy0)
+Set the background-color of the 'timeCode' span based on am/pm (before or after 12)
+    let hrs = tc.getHours()
+Set the background-color of the whole page based on the month
+    let month = tc.getMonth()   // careful - the month array is zero-based
+Alternatively, set it based on season (Jan-Mar, Apr-Jun, Jul-Sept or Oct-Dec)
+
+Optional
+--------
+Write fields for the user to pick a date, along with a button
+    <input type="date" id='dt'>
+    <button id='btnGo'>Go</button>
+Add a click event listener to the button. 
+In the event listener call-back function set background-color of the page as before
+You could also write a field for the time and use that to set some css
+
+If you are interested in JavaScript time calculations, take a look at http://momentjs.com/

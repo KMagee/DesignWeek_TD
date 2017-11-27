@@ -1,0 +1,96 @@
+<!-- see https://pastebin.com/7wqbs3s4 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exploring ECMAScript 6 new features</title>
+</head>
+<body>
+    <article id="main" contenteditable="false">Here is some content</article>
+    <button id='btnEdit'>Make Editable</button>
+    <hr/>
+    <article id='details'>
+        <h1 id='username'>Name</h1>
+        <h2 id='age'>Age</h2>
+        <button id='btnName'>Edit Name</button>
+        <button id='btnAge'>Edit Age</button>
+        <button id='btnSave'>Save Name and Age</button>
+    </article>
+</body>
+<script>
+    // check if there is anything in localStorage
+    str = localStorage.getItem('user-details')
+	if( str != null ){
+         user = JSON.parse(str)
+         age.innerHTML = user.age
+         username.innerHTML = user.username
+    }
+    editName = ()=>{
+        username.setAttribute('contenteditable', 'true')
+        age.setAttribute('contenteditable', 'false')
+    }
+    editAge = ()=>{
+        username.setAttribute('contenteditable', 'false')
+        age.setAttribute('contenteditable', 'true')
+    }
+    saveNameAndAge = ()=>{
+        let user = {}
+            user.username = username.innerHTML
+            user.age = age.innerHTML
+        let str = JSON.stringify(user)
+        localStorage.setItem('user-details', str)
+    }
+
+    btnName.addEventListener('click', editName)
+    btnAge.addEventListener('click', editAge)
+    btnSave.addEventListener('click', saveNameAndAge)
+
+
+    handleClick = ()=>{// same as function handleClick(){}
+        art = document.getElementById('main')
+        state = event.target.innerHTML
+        if(state == 'Make Editable'){
+            art.setAttribute('contentEditable', 'true')
+            btnEdit.innerHTML = 'Save Changes'
+        } else {
+            art.setAttribute('contentEditable', 'false')
+            btnEdit.innerHTML = 'Make Editable'
+        }
+    }
+
+    // add event listeners
+    btnEdit.addEventListener('click', handleClick)
+
+    // explore Mathematical edge cases
+    let n = 0
+    while(true){
+        n = n + 0.1 // or n += 0.1
+        // stop when we reach 0.3
+        if ( Math.abs(n-0.3) < Number.EPSILON ){
+            console.log('done')
+            break
+        }
+    }
+    // Other properties on Number
+    Number.MAX_SAFE_INTEGER // and a handlful of others
+
+// new loops
+let arr = [{n:'Pots', p:6.99},
+           {n:'Dots', p:3.99},
+           {n:'IoTs', p:9.99}] // could load this via JSON
+// loop over this array
+for (let key in arr) {
+    console.log(key, arr[key])
+    // generate a new element
+    let el = document.createElement('p')
+        el.innerHTML = `Item ${arr[key].n} Price ${arr[key].p}`
+    // place this new element in the view (i.e. in the HTML)
+    document.getElementById('main').appendChild(el)
+
+}
+
+
+</script>
+</html>

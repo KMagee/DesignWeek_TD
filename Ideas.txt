@@ -1,0 +1,59 @@
+Project Ideas   see https://pastebin.com/WNvDqYvH
+=============
+Maybe jointly work in a team with allocated roles
+
+Definately write a short project plan
+- aims, modules, technologies
+- mvp
+- how you will know when it's done
+
+Be clear _why_ you are doing something: what will you be able to show for it?
+
+E.g.
+----
+- learn product 'x' and build an app that does 'y'
+- learn technology/ies and combine to do something
+- progress current project to achieve...
+- jointly work to produce...
+
+jQuery and jQueryUI
+- https://jquery.com/
+- https://jqueryui.com/
+- https://jqueryui.com/themeroller/
+
+Angular (NOT AngularJS v1)
+- https://angular.io/guide/quickstart
+- https://material.angular.io/
+- watch out for free book here https://www.udemy.com/the-complete-guide-to-angular-2/
+
+React
+- https://reactjs.org/tutorial/tutorial.html
+
+NodeJS
+- http://stackabuse.com/learn-node-js-a-beginners-guide/
+- free book http://chimera.labs.oreilly.com/books/1234000001808/index.html
+- free book https://www.tutorialspoint.com/nodejs/nodejs_tutorial.pdf
+
+Canvas Drawing with ChartJS or Google Charts
+
+SVG Drawing with D3
+
+MEAN Stack (MongoDB, Express, Angular and Node)
+
+Vue/Aurelia etc.
+- https://scotch.io/tutorials
+
+Make an app from you project
+- PhoneGap/Cordova https://build.phonegap.com/
+- Ionic https://ionicframework.com/docs/intro/tutorial/
+
+Testing
+- Java JUnit
+- JavaScript Jasmine, Karma and Protractor
+- UX testing
+
+Security, Penetration Testing (Pentest) and Cyber forensics
+- https://www.cybrary.it/
+- http://www.tomsitpro.com/articles/free-infosec-training-for-it-pros,1-2707.html
+- https://iase.disa.mil/eta/Pages/index.aspx
+- https://tutorials.cyberaces.org/

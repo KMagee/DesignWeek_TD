@@ -1,0 +1,19 @@
+Design Review 1   see https://pastebin.com/TkchLMca
+===============   until about 2:20 ish
+Create a new empty page and save it as 'design-review1.html'
+Paste content into the page from https://pastebin.com/njhBwgsJ
+Create a style sheet linked to the html (this exercise does not use position:absolute)
+In the style sheet, declare four media queries
+  @media (max-width:320px) {  }
+  @media (min-width:321px) and (max-width:480px)  {  }
+  @media (min-width:481px) and (max-width:640px)  {  }
+  @media (min-width:641px) {  }
+In each media query, style the 'p' tag to show a different background-color
+Also set the font-size, e.g. large, medium, small and smaller
+
+Optional
+Set the paragraph width to suit the screen size, e.g. for up to 320px use width:300px;
+Put an inage in your project folder then use <img src="..."/> to place it in the page
+Style the image width to change depending on the media query
+For the smallest size, do not show the image at all 
+  e.g. img {display:none;}

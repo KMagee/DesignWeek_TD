@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- https://pastebin.com/Grz8icy0 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Experimenting with Environmental Response</title>
+</head>
+<body>
+    <h1>Colour Change Based On Time</h1>
+    <p>timecode: <span id='timecode'></span></p>
+</body>
+    <script>
+    // set a timer
+    let myTimer = setInterval(changeColor, 20) // time is in milliseconds
+
+    function changeColor (){
+        let tc = new Date(547689567);
+
+        let month = tc.get
+
+        let dateNumber = tc*1
+
+        console.log(tc, dateNumber)
+        
+        let redValue   = (dateNumber)%255 // Math.round( Math.random()*255 )
+        let greenValue = (dateNumber-128)%255 //Math.round( Math.random()*255 )
+        let blueValue  = (dateNumber+128)%255 //Math.round( Math.random()*255 )
+
+        let myColor = `rgb(${redValue}, ${greenValue}, ${blueValue})`
+        // put the time code onto the page
+        let target = document.getElementById('timecode')
+            target.innerHTML = tc
+        // set the CSS colour
+        let b = document.getElementsByTagName('body')[0]
+            b.setAttribute('style', `color:${myColor}`)
+    } // end of changeColor function
+    </script>
+</html>

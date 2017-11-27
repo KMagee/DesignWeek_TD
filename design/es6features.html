@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exploring ECMAScript 6 new features</title>
+</head>
+<body>
+    <article id="main" contenteditable="false">Here is some content</article>
+    <button id='btnEdit'>Make Editable</button>
+</body>
+<script>
+    handleClick = ()=>{// same as function handleClick(){}
+        art = document.getElementById('main')
+        art.setAttribute('contentEditable', 'true')
+    }
+
+    // add event listeners
+    btnEdit.addEventListener('click', handleClick)
+
+    // explore Mathematical edge cases
+    let n = 0
+    while(true){
+        n = n + 0.1 // or n += 0.1
+        // stop when we reach 0.3
+        if ( Math.abs(n-0.3) < Number.EPSILON ){
+            console.log('done')
+            break
+        }
+    }
+    // Other properties on Number
+    Number.MAX_SAFE_INTEGER // and a handlful of others
+
+// new loops
+let arr = [{n:'Pots', p:6.99},
+           {n:'Dots', p:3.99},
+           {n:'IoTs', p:9.99}] // could load this via JSON
+// loop over this array
+for (let key in arr) {
+    console.log(key, arr[key])
+    // generate a new element
+    let el = document.createElement('p')
+        el.innerHTML = `Item ${arr[key].n} Price ${arr[key].p}`
+    // place this new element in the view (i.e. in the HTML)
+    document.getElementById('main').appendChild(el)
+
+}
+
+
+</script>
+</html>

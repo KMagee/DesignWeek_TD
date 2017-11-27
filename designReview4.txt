@@ -1,0 +1,18 @@
+Design Review Exercise 4  see https://pastebin.com/uuB2hr3M
+========================  until about 2:20 ish
+Continue with the 'es6features.html' file ( https://pastebin.com/bPAr1Qwz )
+When the user clicks the button, change the button text to read 'Save Changes'
+    btnEdit.innerHTML = 'Save Changes'
+Clicking the button when it reads 'Save Changes' should set contenteditable to false
+    art.setAttribute('contentEditable', 'false')
+You will have to find a way to detect which state the page is in
+
+Now add another <article> tag with a unique id
+Put a <h1> tag saying 'Name' and a <h2> tag saying 'Age'
+Provide two buttons to	 turn on contenteditable for one or other of these elements
+When one element has contenteditable=true make the other element contenteditable=false
+
+Optional
+--------
+At the moment, all the changes are lost when the page is refreshed
+Write code to store the content in localStorage and retrieve it (if it exists)
