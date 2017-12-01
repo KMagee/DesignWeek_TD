@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exploring Responsive Web Design</title>
+
+    <style>
+    /*media queries define min/max dimensions for css */
+    /*@media invokes a media query*/
+    /*this css applies only up to 640ox, if we exceed 640px, css wont apply*/
+
+    body{margin: 0px; padding:0px;}
+    #a, #b {position: absolute;}
+    #a{
+        width: 640px;   
+        height: 320px;
+        top: 0px;
+        left: 0px;
+    }
+    #b{
+        width: 640px; 
+        height: 320px;
+
+    }
+
+
+    @media (max-width:640px) {
+            #a {
+            background-color: antiquewhite;
+           
+            }
+
+             #b {
+            background-color: lightblue;
+            top: 320px;
+            left: 0px;
+            }
+    }
+
+    @media (min-width:641px) {
+            #a {
+            background-color: orange;
+
+            }
+
+             #b {
+            background-color: blue;
+            top: 0px;
+            left: 640px;
+            position: absolute;
+ 
+            }
+    }
+
+
+    
+    </style>
+
+</head>
+<body>
+
+    <div id="main">
+
+        <div id="a"><h1>Content A</h1></div>
+        <div id="b"><h1>Content B</h1>
+        </div>
+
+    </div>
+    
+</body>
+</html>

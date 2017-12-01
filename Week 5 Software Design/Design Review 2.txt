@@ -1,0 +1,46 @@
+Design Review 2
+===============
+You can explore a completed Angular project. (I already downloaded the node modules)
+All the angular documentation is here: https://angular.io/docs
+(NB you can ignore messages about 'your global angular cli version...')
+
+Stop any command-line server you might have already runnig with ctrl-c
+Put 'weather_TD.zip' somewhere (e.g. in a folder on the desktop) and unzip it
+Point your development environment to this folder
+(In Visual Studio code use file-open folder)
+From weather_TD/src/app open the file called 'weatherService.ts'
+on line 14 change http to https and save the file
+
+
+Open a command window inside the weather_TD folder and type ng serve -o
+
+Eventually a web server starts and a browser opens, showing the page
+Explore the app - enter a city/country combination and submit to see a weather report
+
+
+
+Look at the project structure: 
+main.td -> 
+app.module.ts -> 
+app.component.ts
+Notice how 'weatherService' is injected as a provider into app.module
+
+Also note how the form is added to app.component.html
+
+Explore the .ts and .html files in the app folder and note the form (with validation)
+
+Routing
+Notice <router-outlet> inside form.component.html
+Also look at the routes declared inside app.module
+See lines 40 and 44 in form.component.ts, which actually make the routing happen
+
+Optional
+Generate a new component - at a command prompt type ng generate component my-tag
+Then open my-tag.component.html and add some details (e.g. your name)
+Open my-tag.component.ts and add a property to store the date (inside the class)
+Back in my-tag.component.html bind to this new property (double curly braces)
+Open app.component.html and choose somehwere to add the <my-tag> element
+In the running app you should see whatever content you added to the html template
+Feel free to add further evaluations, property bindings or just plain content
+
+You can also unzip 'review4_TD' and explore another app

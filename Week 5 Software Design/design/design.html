@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>Colour Change Based on time</h1>
+
+
+<p>Pick a Date</p>
+
+<input type="date" id="dt">
+<button id='btnGo'>GO!</button>
+
+<p>timecode: <span id="timecode"></span></p>
+
+
+</body>
+
+<script>
+
+
+btnGo.addEventListener('click', changeColor)
+
+
+//set a timer
+
+//let myTimer = setInterval(changeColor, 2000)
+
+
+
+
+
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+
+function changeColor(){
+    let userinput = document.getElementById('dt').value; 
+    let tc = new Date(userinput)
+    console.log(tc)
+
+    //multiply the date by 1, gets you a number
+    let dateNumber = tc*1;
+
+//put the timecode onto the page
+let target = document.getElementById('timecode')
+//set the css color
+color1 = getRandomColor();
+color2 = getRandomColor();
+
+let b = document.getElementsByTagName('body')[0]
+
+// let redValue = (dateNumber-10)%255;
+// let blueValue = (dateNumber+128)%255;
+// let greenValue = (dateNumber-128)%255;
+
+// let myColor = `rgb(${redValue},${greenValue},${blueValue})`
+
+target.innerHTML = tc;
+
+let hours = tc.getHours();
+//console.log(hours)
+
+if (hours<=12){
+    target.setAttribute('style', `background-color: #FF6347`)
+} else ( target.setAttribute('style', `background-color: #9AC3C5`))
+
+
+let month = tc.getMonth();
+
+switch(month) {
+ 
+    case 1:
+    case 2:
+    case 3:
+    b.setAttribute('style', `background-color: #3623DB`);
+    break;
+    
+    case 4:
+    case 5:
+    case 6:
+    b.setAttribute('style', `background-color: #DB7023`);
+    break;
+
+    case 7:
+    case 8:
+    case 9:
+    b.setAttribute('style', `background-color: #23DB2C`);
+    break;
+
+    case 0:
+    case 10:
+    case 11:
+    b.setAttribute('style', `background-color: #f4dc42`);
+    break;
+}
+
+
+
+
+
+
+
+// target.setAttribute('style', `background-color: ${color1}`)
+
+
+
+//b.setAttribute('style', `color: ${myColor}`)
+
+} //end of changeColor
+
+</script>
+
+</html>

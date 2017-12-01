@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <article id="main" contenteditable="false">Here is some content</article>
+    <button id='btnEdit'>Make Editable</button>
+
+
+
+    <script>
+ //add event listener
+
+
+ handleClick = () =>{
+     art = document.getElementById('main')
+
+     art.setAttribute('contenteditable', 'true')
+ }
+
+ btnEdit.addEventListener('click', handleClick)
+
+
+
+let arr = [{n:"Pots",p : 6.99},
+            {n:"Dots", p:3.99},
+            {n:"iots", p:9.99}]
+//loop over the array
+for (let key in arr) {
+   console.log(key, arr[key])
+
+   //generate a new element
+   let el = document.createElement('p')
+        el.innerHTML = `Item ${arr[key].n} Price ${arr[key].p}`
+   //place the new element in the view
+    document.getElementById('main').appendChild(el)
+}
+
+ 
+ 
+    //explore mathematical edge cases
+    
+//     let n = 0;
+
+//     while(true){
+//         n += 0.1;
+
+//         //stop when we reach 0.3
+//         if(Math.abs(n-0.3) < Number.EPS){
+//             console.log('done')
+//             break;
+//         }
+//     }
+
+
+// //Other Number. properties
+// Number.
+
+
+    </script>
+
+</body>
+</html>

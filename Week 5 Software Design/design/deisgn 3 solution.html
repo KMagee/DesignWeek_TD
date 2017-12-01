@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Experimenting with Environmental Response</title>
+</head>
+<body>
+    <h1>Colour Change Based On Time</h1>
+    <p>timecode: <span id='timecode'></span></p>
+    <hr/>
+    <input type="date" id='dt'>
+    <input type="time" id='tm'>
+    <button id='btnGo'>Go</button>
+
+</body>
+    <script>
+    
+    // add a listener to the button
+    btnGo.addEventListener('click', handleClick)
+
+    let chosenDate = new Date()
+    let monthColor = ''
+
+    function handleClick(){
+        chosenDate = new Date(document.getElementById('dt').value)
+        //let chosenTime = new Date(document.getElementById('tm').value)
+        console.log(chosenDate)
+        changeColor()
+    }
+
+    function changeColor (){
+        let tc = new Date(chosenDate);
+        let hrs = tc.getHours()
+        let month = tc.getMonth()
+
+        if(hrs>12){
+            bgColor = 'rgb(255, 128, 64)'
+        } else {
+            bgColor = 'rgb(64, 255, 128)'
+        }
+
+        switch (month){
+            case 0:
+            case 1:
+            case 2:
+                monthColor = 'rgb(153, 215, 226)'
+                break
+            case 3:
+            case 4:
+            case 5:
+                monthColor = 'rgb(68, 238, 111)'
+                break
+            case 6:
+            case 7:
+            case 8:
+                monthColor = 'rgb(250, 192, 98)'
+                break
+            case 9:
+            case 10:
+            case 11:
+                monthColor = 'rgb(212, 126, 99)'
+                break
+            default:
+                monthColor = 'rgb(255, 128, 64)'
+        }
+
+        let dateNumber = tc*1
+        
+        let redValue   = (dateNumber)%255 // Math.round( Math.random()*255 )
+        let greenValue = (dateNumber-128)%255 //Math.round( Math.random()*255 )
+        let blueValue  = (dateNumber-255)%255 //Math.round( Math.random()*255 )
+
+        let myColor = `rgb(${redValue}, ${greenValue}, ${blueValue})`
+        // put the time code onto the page
+        let target = document.getElementById('timecode')
+            target.innerHTML = tc
+            target.setAttribute('style', `background-color:${bgColor}`)
+        // set the CSS colour
+        let b = document.getElementsByTagName('body')[0]
+            b.setAttribute('style', `color:${myColor}`)
+            b.setAttribute('style', `background-color:${monthColor}`)
+    } // end of changeColor function
+    </script>
+</html>
